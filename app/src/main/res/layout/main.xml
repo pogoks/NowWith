@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 2021531003 김범준 11/3 1차 -->
+<!-- 2021531003 김범준 11/8 2차 : 네비게이션 바 크기 고려 화면조정을 위한 하단 리니어레이아웃 추가 / 메뉴글씨 paddingTop 35 → 15 / 첫 번째 버튼 레이아웃 height 200 → 172
+                           2차 : 사용자 정보에 대한 부분 각 ID 부여
+                           (img_photo, tv_hello, tv_id_info, tv_email_info, tv_login_logout, tv_today) 총 6개 -->
+<!-- 2021531003 김범준 11/12 3차 : 메인화면 4개 버튼(img 파일) ID 부여
+                           (img_chat, img_forum, img_profile, img_friend) 총 4개 -->
+<!-- 2021531003 김범준 12/5 6차 : 쪽지 창 구현을 위한 상단 버튼 추가 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#B4FCB2">
+            
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/intro" />
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#15c668" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#CBE0C3">
+
+            <ImageView
+                android:id="@+id/img_setting"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/setting"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="8dp"
+                android:text="MENU"
+                android:textSize="28dp"
+                android:textColor="#808080"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_note"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_mail_outline_black_24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:background="#effbe8">
+
+            <ImageView
+                android:id="@+id/img_chat"
+                android:layout_weight="1"
+                android:layout_width="200dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/chat" />
+
+            <ImageView
+                android:id="@+id/img_forum"
+                android:layout_weight="1"
+                android:layout_width="200dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="25dp"
+                android:src="@drawable/forum" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="182dp"
+            android:orientation="horizontal"
+            android:gravity="top"
+            android:background="#effbe8">
+
+            <ImageView
+                android:id="@+id/img_profile"
+                android:layout_weight="1"
+                android:layout_width="200dp"
+                android:layout_height="170dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/profile" />
+
+            <ImageView
+                android:id="@+id/img_friend"
+                android:layout_weight="1"
+                android:layout_width="200dp"
+                android:layout_height="170dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/friend" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal"
+            android:background="#527D52">
+
+            <ImageView
+                android:id="@+id/img_photo"
+                android:layout_weight="1"
+                android:layout_width="20dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/guest"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#527D52">
+                
+                <TextView
+                    android:id="@+id/tv_hello"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="18dp"
+                    android:text="어서오세요"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/tv_id_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="GUEST 님"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/tv_email_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="로그인이 필요합니다."
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#527D52"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_login_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="로그인"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#10570F"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="22dp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+</LinearLayout>

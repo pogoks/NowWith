@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 2021531003 김범준 11/3 1차 -->
+
+<resources>
+
+    <string-array name="phone">
+        <item> --- </item>
+        <item> 010 </item>
+        <item> 011 </item>
+        <item> 016 </item>
+        <item> 017 </item>
+    </string-array>
+
+</resources>

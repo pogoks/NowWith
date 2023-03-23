@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 2021531003 김범준 11/23 4차 : 내 메세지 배경 -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid
+        android:color="#90EE90" />
+    <padding
+        android:left="30px"
+        android:top="15px"
+        android:right="30px"
+        android:bottom="15px" />
+    <corners
+        android:radius="30px" />
+</shape>

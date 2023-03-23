@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 2021531003 김범준 11/3 1차 -->
+<!-- 2021531003 김범준 11/8 2차 : 각 ID 부여
+    (edt_regID, edt_regPW, edt_regPW_repeat, edt_regEmail, rg_regGender, rb_regGender_male, rb_regGender_female,
+     sp_regPhone1, edt_regPhone2, edt_regPhone3, btn_register) 총 11개 -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/intro" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edt_regID"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:hint="ID"
+            android:inputType="text"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:background="#14c668"
+            android:layout_marginTop="60dp"
+            android:privateImeOptions="defaultlnputmode=english"/>
+
+        <EditText
+            android:id="@+id/edt_regPW"
+            android:inputType="textPassword"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:hint="PASSWORD"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:background="#14c668"
+            android:layout_marginTop="15dp"
+            android:privateImeOptions="defaultlnputmode=english"/>
+
+        <EditText
+            android:id="@+id/edt_regPW_repeat"
+            android:inputType="textPassword"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:hint="REPEAT PASSWORD"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:background="#14c668"
+            android:layout_marginTop="15dp"
+            android:privateImeOptions="defaultlnputmode=english"/>
+
+        <EditText
+            android:id="@+id/edt_regEmail"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:hint="EMAIL"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/ic_mail_outline_black_24dp"
+            android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+            android:background="#14c668"
+            android:layout_marginTop="15dp" />
+
+        <RadioGroup
+            android:id="@+id/rg_regGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <RadioButton
+                android:id="@+id/rb_regGender_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:text="남성"
+                android:textStyle="bold"
+                android:textColor="#808080"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rb_regGender_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="여성"
+                android:textStyle="bold"
+                android:textColor="#808080"
+                android:textSize="20dp"
+                android:layout_weight="1" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="15dp">
+
+            <Spinner
+                android:id="@+id/sp_regPhone1"
+                android:layout_width="85dp"
+                android:layout_height="45dp"
+                android:background="#14c668"
+                android:entries="@array/phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="-"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edt_regPhone2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:hint="----"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:layout_gravity="center"
+                android:background="#14c668" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="-"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edt_regPhone3"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:hint="----"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:layout_gravity="center"
+                android:background="#14c668" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="가입하기"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#527d52"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

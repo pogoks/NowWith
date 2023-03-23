@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 2021531003 김범준 11/3 1차 -->
+<!-- 2021531003 김범준 11/8 2차 → 네비게이션 바 크기 고려 화면조정을 위한 하단 리니어레이아웃 추가 -->
+<!-- 2021531003 김범준 12/1 5차 : friend_search.xml로 이름 변경, 검색한 결과를 보여주는 창으로 변경
+                                 다른 사용자 정보, 친구 추가 버튼, 목록 텍스트 뷰 ID 추가
+                    (img_friend, tv_friend_id, tv_friend_email, tv_friendhp, btn_friend_add, tv_friend_back) 총 6개 -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#B4FCB2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/intro" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#15c668" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CBE0C3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="친구 검색"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#effbe8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#527D52"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_friend"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/guest"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_friend_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="GUEST 님"
+                android:textStyle="bold"
+                android:textSize="22dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/tv_friend_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="aaaaaa123@naver.com"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/tv_friend_hp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="010-1234-5678"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#effbe8">
+
+        <Button
+            android:id="@+id/btn_friend_add"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:text="친구 추가"
+            android:textSize="18dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#1D1682" />
+
+        <TextView
+            android:id="@+id/tv_friend_back"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"
+            android:padding="10dp"
+            android:text="목록"
+            android:textSize="20dp"
+            android:textColor="#808080"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+</LinearLayout>

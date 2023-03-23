@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 2021531003 김범준 11/3 1차 -->
+<!-- 2021531003 김범준 11/8 2차 → 네비게이션 바 크기 고려 화면조정을 위한 하단 리니어레이아웃 추가 -->
+<!-- 2021531003 김범준 11/15 3차 : 제목, 내용, 작성완료 버튼 ID 부여
+                                  (edt_title, edt_main, btn_forum_write) 총 3개 -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#B4FCB2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/intro" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#15c668" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CBE0C3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="게시글 작성"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#effbe8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="제목"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#808080"/>
+
+            <EditText
+                android:id="@+id/edt_title"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:padding="10dp"
+                android:hint="게시글 제목을 입력하세요."
+                android:textColor="#000000"
+                android:background="#d3d3d3" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="내용"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#808080"/>
+
+            <EditText
+                android:id="@+id/edt_main"
+                android:layout_width="300dp"
+                android:layout_height="260dp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:hint="게시글 내용을 입력하세요."
+                android:textColor="#000000"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:scrollHorizontally="true"
+                android:background="#d3d3d3" />
+
+            <Button
+                android:id="@+id/btn_forum_write"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:text="작성하기"
+                android:textSize="18dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:backgroundTint="#808080" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+</LinearLayout>
